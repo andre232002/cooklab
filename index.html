@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <title>CookLab / Cooklap – Generátor receptov</title>
+
+  <meta name="description" content="CookLab (Cooklap) – jednoduchý generátor receptov podľa surovín, ktoré máš doma. Zadaj suroviny a zisti, čo si môžeš uvariť.">
+  <meta name="keywords" content="cooklab,cooklap,generátor receptov,recepty zo surovín,čo navariť">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="hero">
+      <h1>Generátor Receptov</h1>
+      <p class="hero-subtitle">
+        Objav, čo všetko dokážeš navariť z toho, čo máš doma!
+      </p>
+
+      <div class="search-bar">
+        <div class="search-icon">🔍</div>
+        <input
+          id="ingredientsInput"
+          type="text"
+          placeholder="Zadaj suroviny... (napr. kuracie mäso, ryža, paprika)"
+        />
+      </div>
+
+      <button id="searchBtn" class="primary-btn">
+        ☕ Vygenerovať recept
+      </button>
+
+      <p class="hint">
+        Tip: skús napísať bežné suroviny ako <strong>cestoviny, syr, paradajky, zemiaky, vajcia, tuniak...</strong>
+      </p>
+    </header>
+
+    <main>
+      <!-- Výsledok vyhľadávania -->
+      <section id="result" class="result hidden">
+        <div class="recipe-detail-card">
+          <div class="recipe-visual">
+            <img id="recipeImage" class="recipe-image" src="" alt="Obrázok receptu" />
+            <span id="recipeEmoji" class="recipe-emoji">🍽️</span>
+          </div>
+
+          <div class="recipe-detail-content">
+            <h2 id="recipeTitle"></h2>
+            <p id="recipeDescription" class="recipe-detail-description"></p>
+
+            <div class="recipe-tags-block">
+              <h3>Hlavné suroviny v recepte</h3>
+              <div id="recipeTags" class="tags"></div>
+            </div>
+
+            <h3>Postup krok za krokom</h3>
+            <ol id="recipeSteps" class="steps-list"></ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Populárne recepty -->
+      <section class="popular-section">
+        <div class="popular-header">
+          <span class="popular-icon">🌿</span>
+          <h2>Populárne recepty</h2>
+        </div>
+        <div id="popularList" class="popular-list">
+          <!-- Doplní sa cez JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      CookLab / Cooklap – školský projekt generátora receptov pre študentov a zaneprázdnených ľudí.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
